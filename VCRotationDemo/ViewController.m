@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "VCRotation.h"
+
 
 @interface ViewController ()
 
@@ -16,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    VCRotation *rotation = [[VCRotation alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth([UIScreen mainScreen].bounds),CGRectGetWidth([UIScreen mainScreen].bounds) ) minimumValue:0 maximunValue:0 withImage:[UIImage imageNamed:@"rotationButton"]];
+    [self.view addSubview:rotation];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

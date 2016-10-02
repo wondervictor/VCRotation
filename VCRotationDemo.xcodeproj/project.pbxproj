@@ -15,6 +15,7 @@
 		2E54013D1D96443F0029A226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E54013B1D96443F0029A226 /* LaunchScreen.storyboard */; };
 		2E5401481D96443F0029A226 /* VCRotationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5401471D96443F0029A226 /* VCRotationDemoTests.m */; };
 		2E5401531D9644400029A226 /* VCRotationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5401521D9644400029A226 /* VCRotationDemoUITests.m */; };
+		2E5401631D9644640029A226 /* VCRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5401621D9644640029A226 /* VCRotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2E54014E1D9644400029A226 /* VCRotationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCRotationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5401521D9644400029A226 /* VCRotationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCRotationDemoUITests.m; sourceTree = "<group>"; };
 		2E5401541D9644400029A226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5401611D9644640029A226 /* VCRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCRotation.h; path = VCRotation/VCRotation.h; sourceTree = "<group>"; };
+		2E5401621D9644640029A226 /* VCRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCRotation.m; path = VCRotation/VCRotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		2E5401211D96443F0029A226 = {
 			isa = PBXGroup;
 			children = (
+				2E5401601D96444E0029A226 /* VCRotation */,
 				2E54012C1D96443F0029A226 /* VCRotationDemo */,
 				2E5401461D96443F0029A226 /* VCRotationDemoTests */,
 				2E5401511D9644400029A226 /* VCRotationDemoUITests */,
@@ -138,6 +142,15 @@
 				2E5401541D9644400029A226 /* Info.plist */,
 			);
 			path = VCRotationDemoUITests;
+			sourceTree = "<group>";
+		};
+		2E5401601D96444E0029A226 /* VCRotation */ = {
+			isa = PBXGroup;
+			children = (
+				2E5401611D9644640029A226 /* VCRotation.h */,
+				2E5401621D9644640029A226 /* VCRotation.m */,
+			);
+			name = VCRotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5401631D9644640029A226 /* VCRotation.m in Sources */,
 				2E5401351D96443F0029A226 /* ViewController.m in Sources */,
 				2E5401321D96443F0029A226 /* AppDelegate.m in Sources */,
 				2E54012F1D96443F0029A226 /* main.m in Sources */,
