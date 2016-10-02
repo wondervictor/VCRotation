@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol VCRotationDelegate <NSObject>
+
+- (void)didEndRotateWithValue:(CGFloat)value;
+
+@end
+
+
+
+
 @interface VCRotation : UIControl
+
+
+
+@property (nonatomic, weak) id<VCRotationDelegate> delegate;
+
 
 /// 光条宽度
 @property (nonatomic, assign) CGFloat lineWidth;
