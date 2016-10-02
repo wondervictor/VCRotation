@@ -10,7 +10,13 @@
 #import "VCRotation.h"
 
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
+
+
+@property (nonatomic, strong) VCRotation *rotation;
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 
 @end
 
@@ -19,12 +25,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    VCRotation *rotation = [[VCRotation alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth([UIScreen mainScreen].bounds),CGRectGetWidth([UIScreen mainScreen].bounds) ) minimumValue:0 maximunValue:0 withImage:[UIImage imageNamed:@"rotationButton"]];
-    [self.view addSubview:rotation];
+    self.rotation = [[VCRotation alloc]initWithFrame:CGRectMake(0, 100, CGRectGetWidth([UIScreen mainScreen].bounds),CGRectGetWidth([UIScreen mainScreen].bounds) ) minimumValue:0 maximunValue:0 withImage:[UIImage imageNamed:@"rotationButton"]];
+    [self.view addSubview:self.rotation];
+    
+    
+    
+    self.textField.delegate = self;
     
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    CGFloat num = [textField.text floatValue];
+    
+    
+    [self.rotation updateCurrentValue:num];
+    
+    
+    [textField resignFirstResponder];
+    
+    
+    return YES;
+}
+
 
 
 - (void)didReceiveMemoryWarning {

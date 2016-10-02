@@ -17,7 +17,6 @@
 /// 光条颜色
 @property (nonatomic, strong) UIColor *lineColor;
 
-
 @property (nonatomic, assign) CGFloat minimumAngle;
 @property (nonatomic, assign) CGFloat maximumAngle;
 
